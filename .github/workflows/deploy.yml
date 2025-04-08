@@ -11,11 +11,11 @@ jobs:
   test:
     environment: docker
     runs-on: ubuntu-latest
-    container:
-      image: node:16
+    #    container:
+    #      image: node:16
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb # for node mongodb+srv
-      MONGODB_CLUSTER_ADDRESS: mongodb # for node cluster0.hvdf7.mongodb.net
+      MONGODB_CLUSTER_ADDRESS: 127.0.0.1:27017 # mongodb # for node cluster0.hvdf7.mongodb.net
       MONGODB_USERNAME: root # for node ${{ secrets.MONGODB_USERNAME }}
       MONGODB_PASSWORD: example # for node ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
